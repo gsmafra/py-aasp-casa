@@ -1,5 +1,5 @@
 import numpy as np
-from librosa import stft, logamplitude
+from librosa import stft
 from sklearn.svm import SVC
 from file_feats import file_feats
 from train_folds import train_folds
@@ -20,7 +20,7 @@ def extract_m_lspectre(fs, sig, args):
 	
 	# The return value can be whatever you want, you will treat the data later 
 	# on in the classifier function
-	return mean_log_spectre
+	return mean_spectre
 
 def svm_train_test(X_train, Y_train, X_test, args):
 
