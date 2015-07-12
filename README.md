@@ -31,6 +31,16 @@ Everything else (iterating over the files in the dataset and 5-fold cross-valida
 
 See example.py for more details
 
+## Links and references
+
+Giannoulis, Dimitrios, et al.
+**"Detection and classification of acoustic scenes and events: An ieee aasp challenge."**
+Applications of Signal Processing to Audio and Acoustics (WASPAA), 2013 IEEE Workshop on. IEEE, 2013.
+
+Giannoulis, Dimitrios, et al.
+**"A database and challenge for acoustic scene classification and event detection."**
+Signal Processing Conference (EUSIPCO), 2013 Proceedings of the 21st European. IEEE, 2013.
+
 [Detection and Classification of Acoustic Scenes and Events][]
 
 [Public Dataset for Scene Classification Task][]
