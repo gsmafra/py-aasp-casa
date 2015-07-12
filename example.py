@@ -13,7 +13,7 @@ def extract_m_lspectre(fs, sig, args):
 	# Unpack all the arguments for the classifier
 	(n_fft, hop_length, win_length) = args
 
-	# Perform feature extraction, this one had good experimental results
+	# Perform feature extraction
 	sig_stft = stft(sig, n_fft=n_fft, hop_length=hop_length, win_length=win_length)
 	spectre = np.abs(sig_stft)**2
 	mean_spectre = np.mean(spectre, axis=1)
