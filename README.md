@@ -1,6 +1,18 @@
 # py-aasp-casa
 Simple framework to work with the IEEE AASP CASA Challenge dataset in Python
 
+## Dependencies
+
+This package requires:
+
+* [Numpy](http://www.numpy.org/)
+
+* [Scipy](http://www.scipy.org/)
+
+* [Scikit-learn](http://scikit-learn.org/)
+
+* [Librosa](https://github.com/bmcfee/librosa)
+
 ## Installation
 Download and run the setup:
 
