@@ -56,7 +56,7 @@ def test(n_fft=1700, hop_length=1000, win_length=1700, svm_c=0.01):
 	
 	train_folds(svm_train_test, X, Y, cl_args, n_combs=10)
 
-
 if __name__ == '__main__':
 
 	test()
+	
