@@ -14,5 +14,5 @@ compare with published results) is handled by the auxiliary functions
 
 See example.py for more details
 
-(Detection and Classification of Acoustic Scenes and Events)[http://c4dm.eecs.qmul.ac.uk/sceneseventschallenge/]
-(IEEE AASP CASA Challenge - Public Dataset for Scene Classification Task)[http://c4dm.eecs.qmul.ac.uk/rdr/handle/123456789/29]
+http://c4dm.eecs.qmul.ac.uk/sceneseventschallenge/
+http://c4dm.eecs.qmul.ac.uk/rdr/handle/123456789/29
