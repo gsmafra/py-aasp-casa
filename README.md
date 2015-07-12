@@ -2,7 +2,7 @@
 Simple framework to work with the IEEE AASP CASA Challenge dataset in Python
 
 ## Installation
-Download the scripts and run the setup:
+Download and run the setup:
 
 	python setup.py
 
