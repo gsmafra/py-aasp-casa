@@ -15,4 +15,5 @@ compare with published results) is handled by the auxiliary functions
 See example.py for more details
 
 http://c4dm.eecs.qmul.ac.uk/sceneseventschallenge/
+
 http://c4dm.eecs.qmul.ac.uk/rdr/handle/123456789/29
