@@ -10,6 +10,7 @@ from resample_all import resample_all
 
 def run_post_install():
 
+
 	# Double check modules
 
 	modules = set(['numpy', 'scipy', 'librosa', 'sklearn'])
@@ -19,6 +20,7 @@ def run_post_install():
 		except ImportError:
 			print('module \'' + str(module) + '\' is not installed')
 			sys.exit()
+
 
 	# Download dataset
 
@@ -46,11 +48,13 @@ def run_post_install():
 
 	f.close()
 
+
 	# Extract zip
 
 	print('\nExtracting zip file')
 	with zipfile.ZipFile('scenes_stereo.zip', "r") as z:
 		z.extractall('./')
+
 
 	# Reorganize folders
 	

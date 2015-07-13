@@ -1,21 +1,15 @@
-import setuptools
-import urllib2
-import zipfile
-import re
-import sys
-from glob import glob
-from os import chdir, mkdir, rename, getcwd
-from os.path import exists
+from setuptools import setup, find_packages
 
 from setup_post_install import run_post_install
 
-setuptools.setup(
+setup(
     name='aaspcasa',
     version='0.1.0',
     author='Gustavo Sena Mafra',
     author_email='gsenamafra@gmail.com',
     description='IEEE AASP CASA Dataset auxiliary functions',
     license='MIT',
+    packages=find_packages(),
     url='https://github.com/gsmafra/py-aasp-casa',
     install_requires=['numpy', 'scipy', 'scikit-learn', 'librosa'],
     classifiers=[
@@ -28,4 +22,4 @@ setuptools.setup(
         ]
     )
 
-run_post_install()
+#run_post_install()
