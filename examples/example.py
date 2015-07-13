@@ -1,8 +1,7 @@
 import numpy as np
 from librosa import stft
 from sklearn.svm import SVC
-from file_feats import file_feats
-from train_folds import train_folds
+from aaspcasa import file_feats, train_folds
 
 def extract_m_lspectre(fs, sig, args):
 
