@@ -38,6 +38,8 @@ while True:
     status = status + chr(8)*(len(status)+1)
     print status,
 
+f.close()
+
 print('\nExtracting zip file')
 with zipfile.ZipFile('scenes_stereo.zip', "r") as z:
     z.extractall('./')
