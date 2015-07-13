@@ -16,7 +16,7 @@ This package requires:
 ## Installation
 Download and run the setup:
 
-	python setup.py
+	python setup.py install
 
 This will download the database from the official website of the challenge, reorganize with different folders for each class and downsample everything to mono / 8kHz
 
