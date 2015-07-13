@@ -22,4 +22,4 @@ setup(
         ]
     )
 
-#run_post_install()
+run_post_install()
