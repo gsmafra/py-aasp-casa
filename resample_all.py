@@ -6,7 +6,7 @@ from os import chdir, mkdir
 def resample_all():
 
 	audio_folder = 'scenes_stereo/'
-	subsamp_folder = 'scenes_stereo_8k/'
+	subsamp_folder = 'scenes_mono_8k/'
 
 	chdir(audio_folder)
 	mkdir(subsamp_folder)

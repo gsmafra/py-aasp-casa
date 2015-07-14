@@ -5,7 +5,7 @@ from sys import exit
 
 def file_feats(extract_feats, args):
 
-	audio_folder = 'scenes_stereo_8k/'
+	audio_folder = 'scenes_mono_8k/'
 
 	if not exists(audio_folder):
 		print('Please move to the folder containing the /scenes_stereo_8k/ subfolder')
