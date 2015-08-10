@@ -54,7 +54,7 @@ def test(n_fft=1700, hop_length=1000, win_length=1700, svm_c=0.01):
 	audio_dir = '/path/to/scenes_mono_8k/'
 	(X, Y) = file_feats(extract_m_lspectre, audio_dir, fe_args)
 	
-	train_folds(svm_train_test, X, Y, cl_args, n_combs=10)
+	train_folds(svm_train_test, X, Y, cl_args)
 
 if __name__ == '__main__':
 

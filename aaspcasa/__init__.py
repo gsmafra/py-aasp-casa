@@ -1,5 +1,14 @@
-"""Top-level module"""
-
+target_names = ['bus',
+				'busy street',
+				'office',
+				'open air market',
+				'park',
+				'quiet street',
+				'restaurant',
+				'supermarket',
+				'tube',
+				'tube station']
+				
 from . import file_feats
 from . import train_folds
 
