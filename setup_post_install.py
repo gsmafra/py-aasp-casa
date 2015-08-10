@@ -1,15 +1,14 @@
-import urllib2
-import zipfile
-import re
-import sys
 from glob import glob
-from os import chdir, mkdir, rename, getcwd
+from os import chdir, getcwd, mkdir, rename
 from os.path import exists
+from re import split
+from sys import exit
+from urllib2 import urlopen
+from zipfile import ZipFile
 
 from resample_all import resample_all
 
 def run_post_install():
-
 
 	# Double check modules
 
@@ -19,7 +18,7 @@ def run_post_install():
 			__import__(module)
 		except ImportError:
 			print('module \'' + str(module) + '\' is not installed')
-			sys.exit()
+			exit()
 
 
 	# Download dataset
@@ -27,7 +26,7 @@ def run_post_install():
 	url = 'http://c4dm.eecs.qmul.ac.uk/rdr/bitstream/handle/123456789/29/scenes_stereo.zip'
 
 	file_name = url.split('/')[-1]
-	u = urllib2.urlopen(url)
+	u = urlopen(url)
 	f = open(file_name, 'wb')
 	meta = u.info()
 	file_size = int(meta.getheaders("Content-Length")[0])
@@ -52,7 +51,7 @@ def run_post_install():
 	# Extract zip
 
 	print('\nExtracting zip file')
-	with zipfile.ZipFile('scenes_stereo.zip', "r") as z:
+	with ZipFile('scenes_stereo.zip', "r") as z:
 		z.extractall('./')
 
 
@@ -65,7 +64,7 @@ def run_post_install():
 
 	for filename in glob('*'):
 
-		y = re.split('0|1', filename)[0]
+		y = split('0|1', filename)[0]
 		if not exists(y):
 			mkdir(y)
 		rename(filename, y + '/' + filename)
@@ -78,3 +77,7 @@ def run_post_install():
 	resample_all()
 
 	print('Setup finished with no errors')
+	
+if __name__ == '__main__':
+
+	run_post_install()

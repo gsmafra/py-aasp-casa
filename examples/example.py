@@ -25,7 +25,7 @@ def svm_train_test(X_train, Y_train, X_test, args):
 
 	# General-purpose classifier function: takes a train set and its labels for
 	# training and a test set to return predictions. This function will run 5
-	# times for each 
+	# times for each fold combination
 
 	# Unpack all the arguments for the classifier
 	(svm_c, ) = args
@@ -51,7 +51,8 @@ def test(n_fft=1700, hop_length=1000, win_length=1700, svm_c=0.01):
 	fe_args = (n_fft, hop_length, win_length)
 	cl_args = (svm_c,)
 	
-	(X, Y) = file_feats(extract_m_lspectre, fe_args)
+	audio_dir = '/path/to/scenes_mono_8k/'
+	(X, Y) = file_feats(extract_m_lspectre, audio_dir, fe_args)
 	
 	train_folds(svm_train_test, X, Y, cl_args, n_combs=10)
 

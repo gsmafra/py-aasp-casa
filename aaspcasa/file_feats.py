@@ -7,8 +7,7 @@ from scipy.io.wavfile import read
 def file_feats(extract_feats, audio_dir, args):
 
 	if not exists(audio_dir):
-		print('Audio directory not found')
-		exit()
+		raise Exception('Audio directory not found')
 
 	data_x = []
 	data_y = []
