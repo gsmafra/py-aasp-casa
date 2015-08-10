@@ -1,24 +1,23 @@
 from glob import glob
-from scipy.io.wavfile import read
 from os.path import exists
 from sys import exit
 
-def file_feats(extract_feats, args):
+from scipy.io.wavfile import read
 
-	audio_folder = 'scenes_mono_8k/'
+def file_feats(extract_feats, audio_dir, args):
 
-	if not exists(audio_folder):
-		print('Please move to the folder containing the /scenes_mono_8k/ subfolder')
+	if not exists(audio_dir):
+		print('Audio directory not found')
 		exit()
-	
+
 	data_x = []
 	data_y = []
 	
 	class_id = 0
 
-	for sub_folder in glob(audio_folder + '*'):
+	for sub_dir in sorted(glob(audio_dir + '*')):
 
-		for filename in glob(sub_folder + '/*.wav'):
+		for filename in sorted(glob(sub_dir + '/*.wav')):
 
 			[fs, sig] = read(filename)
 			feats = extract_feats(fs, sig, args)
