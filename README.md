@@ -1,5 +1,5 @@
 # py-aasp-casa
-Simple framework to work with the IEEE AASP CASA Challenge dataset in Python
+Simple library to work with the IEEE AASP CASA Challenge 2013 dataset in Python
 
 ## Dependencies
 
